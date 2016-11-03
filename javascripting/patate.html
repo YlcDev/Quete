@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <script>
+        var answer = prompt("Hey mon ami ! Tu aimes ça les patates ?", "oui / non");
+        var potate = "";
+
+
+        switch (answer) {
+        case "oui":
+            for (var i = 0; i < 7; i++) {
+                console.log(potate += "#")
+            }
+            break;
+        case "non":
+            alert("Roh bah c'est balo ca....")
+            break;
+        default:
+            console.log("Je vous sens comme tiraillé")
+            break;
+
+        };
+    </script>
+
+</body>
+
+</html>
