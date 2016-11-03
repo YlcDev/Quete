@@ -1,0 +1,327 @@
+    1  sudo dpkg -i --force-depends Brackets.Release.1.7.64-bits.deb
+    2  sudo dpkg -i --force-depends Brackets.Release.1.7.64-bit.deb
+    3  sudo dpkg -i --force-depends libgrypt11_1.5.3-5_amd64.deb
+    4  sudo dpkg -i --force-depends libgcrypt11_1.5.3-5_amd64.deb
+    5  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    6  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+    7  which ruby
+    8  sudo apt-get update
+    9  sudo apt-get install gist
+   10  gem install gist
+   11  gist --login
+   12  apt-get install git
+   13  sudo apt-get install git
+   14  sudo apt-get install gisto
+   15  apt-get install git
+   16  sudo apt-get install git
+   17  git config --global user.name "YlcDev"
+   18  git config --global user.email "yannicklc.dev@gmail.com"
+   19  git config --global credential.helper cache
+   20  git config --global credential.helper 'cache --timeout=3600'
+   21  ssh-keygen -t rsa 4096 -C "yannicklc.dev@gmail.com"
+   22  ssh-keygen -t rsa -b 4096 -C "yannicklc.dev@gmail.com"
+   23  eval "$(ssh-agent -s)"
+   24  ssh-add ~/ssh/id_rsa
+   25  cat id_rsa.pub
+   26  ls -al ~/.ssh
+   27  cat / id_rsa.pub
+   28  cat /.ssh/id_rsa.pub
+   29  ls
+   30  exit
+   31  ls
+   32  cd .ssh
+   33  ls
+   34  cat id_rsa.pub
+   35  cls
+   36  clear
+   37  cd
+   38  ls
+   39  cd documents
+   40  cd Documents
+   41  ls
+   42  cd..
+   43  cd
+   44  cd home
+   45  cd Home
+   46  mk reademe.md
+   47  touch test.txt
+   48  ls
+   49  cat test.txt
+   50  gedit test.txt
+   51  git init
+   52  git status
+   53  git add test.txt
+   54  git status
+   55  git commit -m "premier UL"
+   56  git status
+   57  git log
+   58  touch README.md
+   59  gedit README.md
+   60  git status
+   61  git add READMEmd
+   62  git add README.md
+   63  git status
+   64  git commit -m "UL du fichier README.md"
+   65  git status
+   66  git push origin master
+   67  git clone git@github.com:YlcDev/Site.git
+   68  ls
+   69  rm test.txt
+   70  ls
+   71  gedit README.md
+   72  git status
+   73  git log
+   74  git status
+   75  git commit -m "UL du fichier README.md"
+   76  git add README.md
+   77  git status
+   78  git push
+   79  git push README.md
+   80  git head
+   81  git --help
+   82  git push
+   83  git push Site
+   84  git push origin
+   85  git config --global user.name "YlcDev"
+   86  git config --global user.mail "yannicklc.dev@gmail.com"
+   87  git config --list
+   88  git branch
+   89  git push
+   90  git remote add Site https://github.com/YlcDev/Site
+   91  git push Site
+   92  git remote add origin git@github.com:YlcDev/Site.git
+   93  git push -u origin master
+   94  git status
+   95  git log
+   96  git add README.md
+   97  git status
+   98  git push
+   99  gedit README.md
+  100  vim README.md
+  101  git status
+  102  git rm test.txt
+  103  git status
+  104  git push
+  105  git push -u origin master
+  106  git push origin master
+  107  git remote add origin git@github.com:YlcDev/Site.git
+  108  git status
+  109  git push -u origin master
+  110  git status
+  111  git push -u origin master
+  112  touch README.md
+  113  ls
+  114  cd Site
+  115  ls
+  116  gedit README.md
+  117  git status
+  118  git add README.md
+  119  git stauts
+  120  git status
+  121  git push -u origin master
+  122  git remote add origin git@github.com:YlcDev/Site.git
+  123  git push -u origin master
+  124  cd..
+  125  cd ..
+  126  ls
+  127  git status
+  128  git push -u origin master
+  129  cd Site
+  130  ls
+  131  touche README.md
+  132  touch README.md
+  133  ls
+  134  gedit README.md
+  135  git status
+  136  git init
+  137  git status
+  138  git add README.md
+  139  git status
+  140  git commit -m "first commit"
+  141  git remote add origin git@github.com:YlcDev/Site.git
+  142  git push -u origin master
+  143  git status
+  144  gedit README.md
+  145  git status
+  146  git add README.md
+  147  git status
+  148  git commit -m "et un 2éme commit"
+  149  git status
+  150  git push -u origin master
+  151  git status
+  152  git init
+  153  git remote add origin git@github.com:YlcDev/quete_jquery.git
+  154  git push -u origin master
+  155  git status
+  156  git add *
+  157  git status
+  158  git commit -m "UL all files"
+  159  git status
+  160  git push -u master origin
+  161  git push -u origin master
+  162  git init
+  163  git status
+  164  git add *
+  165  git status
+  166  git push -u origin master
+  167  git commit -m "push de tout le travail s1"
+  168  git status
+  169  git push -u origin master
+  170  git push git@github.com:YlcDev/Perette.git
+  171  git push -u git@github.com:YlcDev/Perette.git
+  172  git remote add origin git@github.com:YlcDev/Perette.git
+  173  git push -u origin master
+  174  ls
+  175  sudo apt-get node.js
+  176  sudo install node-v4.5.0-linux-x64.tar.xz
+  177  npm install -g ungit
+  178  sudo apt install npm
+  179  ungit
+  180  sudo -H npm install -g ungit
+  181  ungit
+  182  git init
+  183  git status
+  184  git add *
+  185  git status
+  186  git push -u origin master
+  187  git status
+  188  git clone git@github.com:YlcDev/dessine_moi_un_repo_git.git
+  189  git status
+  190  git push -u origin master
+  191  git remote add origin git@github.com:YlcDev/dessine_moi_un_repo_git.git
+  192  git push -u origin master
+  193  git status
+  194  git remote add origin git@github.com:YlcDev/dessine_moi_un_repo_git.git
+  195  git push -u origin master
+  196  git status
+  197  git add *
+  198  git status
+  199  git push -u origin master
+  200  git pull
+  201  cd~ 
+  202  cd~
+  203  help chown
+  204  man chown
+  205  git add *
+  206  git status
+  207  git commit -m "add v2"
+  208  git status
+  209  git pus -u origin master
+  210  git push -u origin master
+  211  quit
+  212  exit
+  213  gedit langstat.sh
+  214  gedit count_letters.sh
+  215  gedit langstat.sh
+  216  git init
+  217  git remote add origin git@github.com:YlcDev/git_workflow.git
+  218  git status
+  219  touch GW.txt
+  220  gedit GW.txt
+  221  git status
+  222  git add *
+  223  git status
+  224  git commit -m "maj 1"
+  225  git add *
+  226  git commit -m "maj 2"
+  227  git add *
+  228  git commit -m "maj 3"
+  229  git status
+  230  git checkout dev
+  231  git branch dev
+  232  git status
+  233  git add *
+  234  git merge master
+  235  git status
+  236  git status
+  237  git chekout features
+  238  git branch features
+  239  git status
+  240  git add *
+  241  git status
+  242  git commit -u "update CSS  footer"
+  243  git status
+  244  git push -u origin master
+  245  git branch features
+  246  git status
+  247  git checkout features
+  248  git status
+  249  git add *
+  250  git status
+  251  git push - u origin features
+  252  git push -u origin features
+  253  git status
+  254  git add *
+  255  git push -u origin features
+  256  git commit -m "test ..."
+  257  git add *
+  258  git push -u origin features
+  259  git commit -m "oups oubli d'un commcomm"
+  260  git push -u origin features
+  261  git init
+  262  git staus
+  263  git status
+  264  git add *
+  265  git commit -m "first commit"
+  266  git remote add origin git@github.com:YlcDev/Mon_CV_Wild.git
+  267  git status
+  268  git push -u origin master
+  269  sudo apt-get update
+  270  sudo apt-get install git-core curl zliblg-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev
+  271  cd
+  272  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+  273  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+  274  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  275  exec $SHELL
+  276  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+  277  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+  278  exec $SHELL
+  279  ifconfig
+  280  netstat
+  281  netstat -a
+  282  rbenv install 2.3.1
+  283  rbenv global 2.3.1
+  284  ruby -v
+  285  gem install bundler
+  286  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  287  sudo apt-get install -y nodejs
+  288  gem install rails -v 4.2.6
+  289  rbenv rehash
+  290  rails -v
+  291  git iit
+  292  git clone git@github.com:Karb0/bugproject.git
+  293  rails s
+  294  ls
+  295  cd bugproject
+  296  rails s
+  297  bundle install
+  298  rails s
+  299  bundle exec rake db:migrate
+  300  rails s
+  301  git status
+  302  git checkout features
+  303  git commit -m "et de 2"
+  304  git push -u origin features
+  305  git add *
+  306  git commit -m "commit 1"
+  307  git commit -m "commit 2"
+  308  git push -u rogin features
+  309  git status
+  310  git add *
+  311  git status
+  312  git commit -m "update html & css"
+  313  git push -u origin master
+  314  git status
+  315  git commit "et un de plus"
+  316  git push -u origin features
+  317  gist index.html space_invader.png
+  318  gist index.html
+  319  gist index.html space_invader.png
+  320  gist space_invader.png
+  321  gist index.html
+  322  git clone git@github.com:WildCodeSchool/clmystery.git
+  323  head -n 20 people
+  324  echo Jeremy Bowers
+  325  gist mystery.png
+  326  echo Jeremy Bowers
+  327  history > historique.log
