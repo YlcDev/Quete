@@ -1,0 +1,7 @@
+mvc_todo:
+    resource: "@MvcBundle/Resources/config/routing/todo.yml"
+    prefix:   /todo
+
+mvc_homepage:
+    path:     /
+    defaults: { _controller: MvcBundle:Default:index }

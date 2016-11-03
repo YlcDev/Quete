@@ -1,0 +1,20 @@
+MvcBundle\Entity\Todo:
+    type: entity
+    table: null
+    repositoryClass: MvcBundle\Repository\TodoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        temps:
+            type: time
+    lifecycleCallbacks: {  }
