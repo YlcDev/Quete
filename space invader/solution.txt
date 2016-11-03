@@ -1,0 +1,22 @@
+
+Suite a un probleme sur le fichier historique de ma machine, je me retrouve avec le contenu suivant:
+
+  322  git clone git@github.com:WildCodeSchool/clmystery.git
+  323  head -n 20 people
+  324  echo Jeremy Bowers
+  325  gist mystery.png
+  326  echo Jeremy Bowers
+  327  history > historique.log
+
+Au vu des soucis que cela semble poser pour les corrections, un formateur m'a validé de ne re-poster que le chemin suivi sans tout refaire. Comme suit:
+
+- ouverture du README.md
+- recherche sur "CLUE" dans crimscene
+- verifications des "interviews"
+- verification des "vehicles" en L337 / Honda / Blue
+- recherche croisee sur les cartes et les noms ressortis
+- choix entre "Jacqui Maher" et "Jeremy Bowers"
+- verification de ces personnes
+- coupable => Jeremy Bowers
+
+NB: si qqn sait pourquoi ma console est partie en sucette, je veut bien avoir une explications :#
