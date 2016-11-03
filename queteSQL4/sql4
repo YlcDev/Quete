@@ -1,0 +1,153 @@
+
+
+CREATE DATABASE queteSQL4 CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+CREATE TABLE eleve(
+  id_eleve SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nom_eleve VARCHAR(50),
+  prenom_eleve VARCHAR(50),
+  adresse_eleve VARCHAR(255),
+  num_dossier int
+);
+
+CREATE TABLE salle(
+  id_salle SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nom_salle VARCHAR(50)
+);
+
+CREATE TABLE prof(
+  id_prof SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nom_prof VARCHAR(50),
+  prenom_prof VARCHAR(50),
+  lang_prof VARCHAR(255),
+  num_dossier int
+);
+
+CREATE TABLE reservation(
+  id_reservation SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  date_reservation DATE,
+  duree_reservation TIME,
+  qui_reservation VARCHAR(50),
+  nom_salle_reservation VARCHAR(50),
+  prof_id SMALLINT,
+  FOREIGN KEY(prof_id) REFERENCES prof(id_prof),
+  salle_id SMALLINT,
+  FOREIGN KEY(salle_id) REFERENCES salle(id_salle),
+  eleve_id SMALLINT,
+  FOREIGN KEY(eleve_id) REFERENCES eleve(id_eleve)
+);
+
+
+
+INSERT INTO eleve (nom_eleve, prenom_eleve, adresse_eleve, num_dossier) VALUES ('Google', 'It', 'dans un datacenter', '123456');
+INSERT INTO eleve (nom_eleve, prenom_eleve, adresse_eleve, num_dossier) VALUES ('machine', 'chose', 'ici ou la', '789123');
+
+INSERT INTO salle (nom_salle) VALUES ('gymnase');
+INSERT INTO salle (nom_salle) VALUES ('bureau');
+
+INSERT INTO prof (nom_prof, prenom_prof, lang_prof, num_dossier) VALUES ('petite', 'Celine', 'php', '159753');
+INSERT INTO prof (nom_prof, prenom_prof, lang_prof, num_dossier) VALUES ('rase', 'JB', 'js', '357951');
+
+INSERT INTO reservation (date_reservation, duree_reservation, qui_reservation, nom_salle_reservation ) VALUES ('2016-08-15', '01:00:00', 'Celine', 'bureau');
+INSERT INTO reservation (date_reservation, duree_reservation, qui_reservation, nom_salle_reservation ) VALUES ('2016-08-17', '01:00:00', 'JB', 'gymnase');
+
+
+
+Resultats des bases:
+=======================================================================
+
+
+mysql> show columns from eleve;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id_eleve      | smallint(6)  | NO   | PRI | NULL    | auto_increment |
+| nom_eleve     | varchar(50)  | YES  |     | NULL    |                |
+| prenom_eleve  | varchar(50)  | YES  |     | NULL    |                |
+| adresse_eleve | varchar(255) | YES  |     | NULL    |                |
+| num_dossier   | int(11)      | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+
+mysql> select * from eleve;
++----------+-----------+--------------+--------------------+-------------+
+| id_eleve | nom_eleve | prenom_eleve | adresse_eleve      | num_dossier |
++----------+-----------+--------------+--------------------+-------------+
+|        1 | Google    | It           | dans un datacenter |      123456 |
+|        2 | machine   | chose        | ici ou la          |      789123 |
++----------+-----------+--------------+--------------------+-------------+
+2 rows in set (0.00 sec)
+
+
+
+mysql> show columns from prof;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id_prof     | smallint(6)  | NO   | PRI | NULL    | auto_increment |
+| nom_prof    | varchar(50)  | YES  |     | NULL    |                |
+| prenom_prof | varchar(50)  | YES  |     | NULL    |                |
+| lang_prof   | varchar(255) | YES  |     | NULL    |                |
+| num_dossier | int(11)      | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from prof;
++---------+----------+-------------+-----------+-------------+
+| id_prof | nom_prof | prenom_prof | lang_prof | num_dossier |
++---------+----------+-------------+-----------+-------------+
+|       1 | petite   | Celine      | php       |      159753 |
+|       2 | rase     | JB          | js        |      357951 |
++---------+----------+-------------+-----------+-------------+
+2 rows in set (0.00 sec)
+
+
+
+mysql> show columns from salle;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| id_salle  | smallint(6) | NO   | PRI | NULL    | auto_increment |
+| nom_salle | varchar(50) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from salle;
++----------+-----------+
+| id_salle | nom_salle |
++----------+-----------+
+|        1 | gymnase   |
+|        2 | bureau    |
++----------+-----------+
+2 rows in set (0.00 sec)
+
+
+
+mysql> show columns from reservation;
++-----------------------+-------------+------+-----+---------+----------------+
+| Field                 | Type        | Null | Key | Default | Extra          |
++-----------------------+-------------+------+-----+---------+----------------+
+| id_reservation        | smallint(6) | NO   | PRI | NULL    | auto_increment |
+| date_reservation      | date        | YES  |     | NULL    |                |
+| duree_reservation     | time        | YES  |     | NULL    |                |
+| qui_reservation       | varchar(50) | YES  |     | NULL    |                |
+| nom_salle_reservation | varchar(50) | YES  |     | NULL    |                |
+| prof_id               | smallint(6) | YES  | MUL | NULL    |                |
+| salle_id              | smallint(6) | YES  | MUL | NULL    |                |
+| eleve_id              | smallint(6) | YES  | MUL | NULL    |                |
++-----------------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> select * from reservation;
++----------------+------------------+-------------------+-----------------+-----------------------+---------+----------+----------+
+| id_reservation | date_reservation | duree_reservation | qui_reservation | nom_salle_reservation | prof_id | salle_id | eleve_id |
++----------------+------------------+-------------------+-----------------+-----------------------+---------+----------+----------+
+|              1 | 2016-08-15       | 01:00:00          | Celine          | bureau                |    NULL |     NULL |     NULL |
+|              2 | 2016-08-17       | 01:00:00          | JB              | gymnase               |    NULL |     NULL |     NULL |
++----------------+------------------+-------------------+-----------------+-----------------------+---------+----------+----------+
+2 rows in set (0.00 sec)
+
+
+
