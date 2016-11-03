@@ -1,0 +1,41 @@
+
+
+CREATE DATABASE queteSQL CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+CREATE TABLE promo(
+  id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(50),
+  prenom VARCHAR(50),
+  residence VARCHAR(255)
+);
+
+INSERT INTO promo (nom, prenom, residence) VALUES ('Google', 'It', 'dans un datacenter');
+INSERT INTO promo (nom, prenom, residence) VALUES ('Laurie', 'machine', 'sais plus');
+INSERT INTO promo (nom, prenom, residence) VALUES ('prof', 'naine', 'm en fout');
+INSERT INTO promo (nom, prenom, residence) VALUES ('Jul', 'le nantais', 'nantes');
+INSERT INTO promo (nom, prenom, residence) VALUES ('titif', 'robota', 'pas loin');
+
+SHOW COLUMNS FROM promo;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | smallint(6)  | NO   | PRI | NULL    | auto_increment |
+| nom       | varchar(50)  | YES  |     | NULL    |                |
+| prenom    | varchar(50)  | YES  |     | NULL    |                |
+| residence | varchar(255) | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+SELECT * FROM promo;
++----+--------+------------+--------------------+
+| id | nom    | prenom     | residence          |
++----+--------+------------+--------------------+
+|  1 | Google | It         | dans un datacenter |
+|  2 | Laurie | machine    | sais plus          |
+|  3 | prof   | naine      | m en fout          |
+|  4 | Jul    | le nantais | nantes             |
+|  5 | titif  | robota     | pas loin           |
++----+--------+------------+--------------------+
+5 rows in set (0.00 sec)
+
