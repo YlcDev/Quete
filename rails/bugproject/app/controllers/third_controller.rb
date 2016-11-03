@@ -1,0 +1,2 @@
+class ThirdController < ApplicationController
+end

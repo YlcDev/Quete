@@ -1,0 +1,2 @@
+class FifthController < ApplicationController
+end

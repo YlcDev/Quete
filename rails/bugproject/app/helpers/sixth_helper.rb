@@ -1,0 +1,2 @@
+module SixthHelper
+end

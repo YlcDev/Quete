@@ -1,0 +1,2 @@
+class SixthController < ApplicationController
+end
