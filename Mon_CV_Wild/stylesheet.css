@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(104,187,285);
+}
+
+#header{
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+#left-box {
+    background-color: rgb(9,30,45);
+    float: left;
+    color: #fff;
+    width: 25%;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding-left: 50px;
+    /*padding-right: 50px;*/
+}
+
+#left-box, li {
+    list-style: none;
+}
+
+#tete {
+    margin-top: 20px;
+}
+
+#right-box {
+    float: right;
+    width: 70%;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+#experiences-box {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+#studies-box {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding-left: 15px;
+}
