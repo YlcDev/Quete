@@ -1,0 +1,20 @@
+Début algorithme QUEL_AGE
+
+declaration variables:
+
+anneeNaiss chiffre entier
+age chiffre entier
+
+Afficher "Quel age avez vous?"
+
+Demander age
+
+Si age n'est pas un chiffre entier
+    | renvoyer "mauvaise saisie"
+Sinon
+    | faire le calcul année actuel moins age saisi
+    | afficher "vous etes né(e) en: " (date - age)
+Fin Si
+
+Fin algorithme QUEL_AGE
+
