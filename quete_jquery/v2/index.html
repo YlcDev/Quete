@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>carroussel jquery</title>
+    <style>
+        #carrousel {
+            position: relative;
+            height: 200px;
+            width: 700px;
+            margin: auto;
+        }
+        
+        #carrousel ul li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carrousel">
+        <ul>
+            <li><img src="http://lorempixel.com/700/200/" /></li>
+            <li><img src="http://lorempixel.com/g/700/200/" /></li>
+            <li><img src="http://lorempixel.com/700/200/abstract/" /></li>
+            <li><img src="http://lorempixel.com/700/200/abstract/" /></li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var $carrousel = $('#carrousel'),
+                $img = $('#carrousel img'),
+                indexImg = $img.length - 1,
+                i = 0,
+                $currentImg = $img.eq(i);
+
+            $img.css('display', 'none');
+            $currentImg.css('display', 'block');
+
+
+            $('.next').click(function () {
+
+                i++;
+
+                if (i <= indexImg) {
+                    $img.css('display', 'none');
+                    $currentImg = $img.eq(i);
+                    $currentImg.css('display', 'block');
+                } else {
+                    i = indexImg;
+                }
+
+            });
+
+            $('.prev').click(function () {
+
+                i--;
+
+                if (i >= 0) {
+                    $img.css('display', 'none');
+                    $currentImg = $img.eq(i);
+                    $currentImg.css('display', 'block');
+                } else {
+                    i = 0;
+                }
+
+            });
+
+            function slideImg() {
+                setTimeout(function () {
+
+                    if (i < indexImg) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+
+                    $img.css('display', 'none');
+
+                    $currentImg = $img.eq(i);
+                    $currentImg.css('display', 'block');
+
+                    slideImg();
+
+                }, 3000);
+            }
+
+            slideImg();
+
+        });
+    </script>
+</body>
+
+</html>
