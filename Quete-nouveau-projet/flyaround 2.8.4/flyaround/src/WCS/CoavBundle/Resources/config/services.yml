@@ -1,0 +1,33 @@
+#services:
+#    wcs_coav.example:
+#        class: WCS\CoavBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+
+# src/WCS/CoavBundle/Resources/config/services.yml
+
+services:
+    app.admin.terrain:
+        class: WCS\CoavBundle\Admin\TerrainAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenu Terrain", label: "Terrain" }
+        arguments:
+            - ~
+            - WCS\CoavBundle\Entity\Terrain
+            - ~
+    app.admin.flight:
+            class: WCS\CoavBundle\Admin\FlightAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Contenu Flight", label: "Flight" }
+            arguments:
+                - ~
+                - WCS\CoavBundle\Entity\Flight
+                - ~
+
+    app.admin.planeModel:
+                class: WCS\CoavBundle\Admin\FlightAdmin
+                tags:
+                    - { name: sonata.admin, manager_type: orm, group: "Contenu Plane Model", label: "Plane Model" }
+                arguments:
+                    - ~
+                    - WCS\CoavBundle\Entity\Flight
+                    - ~
